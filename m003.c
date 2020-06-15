@@ -29,7 +29,6 @@ int is_prime (int a)
         marcador++;
       }
   }
-  if (a==1)
     marcador++;
   if (marcador == 0)
     return 1;
