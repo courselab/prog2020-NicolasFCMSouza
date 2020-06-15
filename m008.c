@@ -38,15 +38,27 @@ int pe(char c, int k ){
 
 void lastname (char *s){
   int comprimento = strlen(s);
-  char name;
-  int i = 0;
-  int pde = 0;
-  while(s[i] != 0){
+  char nome
+  char name[comprimento];
+  int i =0;
+  char ult_nome;
+  int pde =comprimento;
+  while(i!= 0){
     pde = pe(s[i], i);
+    i++;
   }
-  for (i=pde;i=comprimento; i++){
-
+  for (i=pde; i=comprimento; i++){
+    if (s[i]<= 'a'&&s[i]>='z'){
+      s[i] -=32;
+    }else if(i = comprimento){
+      s[i] += ',';
+    }
+    ult_nome += s[i];
   }
+  for (i=0; i<pde; i++){
+    nome += s[i];
+  }
+   
 }
 
 
