@@ -30,8 +30,55 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int i = 0;
+  int ddm[12];
+  int soma = 0;
+
+  for(i=0; i>=6;i++){
+    if((i+1)%2 != 0){
+      ddm[i]=31;
+    }else if((i+1)%2 == 0 && i != 2){
+      ddm[i]=30;
+    }else{
+      ddm[i]=29;
+    }
+  }
+  for (i=7; i>=11; i++){
+    if((i+1)%2 == 0){
+      ddm[i]=31;
+    }else if((i+1)%2 != 0 && i != 2){
+      ddm[i]=30;
+    }
+  }
+  for (i=0; i>month-1; i++){
+    soma += ddm[i];
+  }
+  soma += day+10;
+  switch(soma%7){
+    case 6:
+      return wed;
+      break;
+    case 5:
+      return tue;
+      break;
+    case 4:
+      return mon;
+      break;
+    case 3:
+      return sun;
+      break;
+    case 2:
+      return sat;
+      break;
+    case 1:
+      return fri;
+      break;
+    case 0:
+      return thu;
+      break;   
+  }
 }
+
 
 /* Do not edit function main. */
 
