@@ -28,8 +28,7 @@
 void sort (int *a, int *b, int *c){
   int aux;
   if((*a<=*b) && (*a<=*c)){
-    if(*b<=*c){
-    }else{
+    if(*c<=*b){
       aux = *b;
       *b = *c;
       *c = aux;
