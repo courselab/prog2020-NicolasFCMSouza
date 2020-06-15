@@ -28,8 +28,7 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 /* Return the day of the week in the numeric form:
    Sunday=0, Monday=1... Saturday=6.*/
 
-int day_of_week (int day, int month)
-{
+int day_of_week (int day, int month){
   int i = 0;
   int ddm[12];
   int soma = 0;
