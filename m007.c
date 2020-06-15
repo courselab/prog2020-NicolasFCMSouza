@@ -23,7 +23,8 @@
 #include <stdlib.h>
 
 #define MAX 256
-int nl (char c){
+int nl (char c)
+{
   int n = 0;
   if (c>='a' && c<='z'){
     n+=1;

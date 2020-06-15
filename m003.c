@@ -21,7 +21,8 @@
 
 /* Verify if the positive integer 'a' is prime. */
 
-int is_prime (int a){
+int is_prime (int a)
+{
   int i, marcador =0;
  for (i = 2; i <= a / 2; i++) {
     if (a % i == 0) {
