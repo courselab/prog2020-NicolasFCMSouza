@@ -65,10 +65,10 @@ int day_of_week (int day, int month)
       return mon;
       break;
     case 3:
-      return sun;
+      return sat;
       break;
     case 2:
-      return sat;
+      return sun;
       break;
     case 1:
       return fri;
