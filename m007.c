@@ -23,6 +23,7 @@
 #include <stdlib.h>
 
 #define MAX 256
+
 int nl (char c)
 {
   int n = 0;
@@ -36,7 +37,8 @@ int nl (char c)
 }
 /* Count the number of letters in string s.*/
 
-int lettercount (char *s){
+int lettercount (char *s)
+{
   int contagem =0, i = 0;
   while(s[i] != 0){
     contagem +=nl(s[i]);
