@@ -23,15 +23,13 @@
 
 int is_prime (int a)
 {
-  int i, marcador =0;
-  for (i = 2; i <= a / 2; i++) {
-      if (a % i == 0) {
-        marcador++;
-      }
+  int i, marcador=0;
+  for (i=1; i<a;i++){
+    if((a%i)==0){
+      marcador++;
+    }
   }
-  if (a==1)
-    marcador++;
-  if (marcador == 0)
+  if (marcador == 1)
     return 1;
   else
     return 0;

@@ -30,7 +30,6 @@ int decimal (char *b)
 {
   int comprimento, i;
   int contador = 0;
-  int auxiliar = 0; 
   int pot_base_dois =1;
 
   comprimento=strlen(b);
