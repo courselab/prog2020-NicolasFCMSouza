@@ -28,22 +28,18 @@
 
 int decimal (char *b)
 {
- int comprimento, i;
- int contador = 0;
- int auxiliar = 0; 
- int pot_base_dois =1;
+  int comprimento, i;
+  int contador = 0;
+  int auxiliar = 0; 
+  int pot_base_dois =1;
 
- comprimento=strlen(b);
-
- char binario[100];
- binario[100]=*b;
-
- for (i=comprimento-1; i>=0; i--){
-    if(binario[i]=='1'){
-      contador += 1*pot_base_dois;
+  comprimento=strlen(b);
+  
+  for (i=comprimento-1; i>=0; i--){
+    if(b[i]=='1'){
+     contador += 1*pot_base_dois;
     }
     pot_base_dois *= 2;
-   
   }
  return contador;
 }
