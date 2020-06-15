@@ -26,50 +26,41 @@
 /* Sort three integers x, y, z in ascending order.*/
 
 void sort (int *a, int *b, int *c){
-  int min, med, max;
+  int aux;
   if(*a<=*b && *a<=*c){
     if(*b<=*c){
     }else{
-      min = *a;
-      med = *c;
-      max = *b;
-      *a = min;
-      *b = med;
-      *c = max;;
+      aux = *b;
+      *b = *c;
+      *c = aux;
     }  
   }
   if(*b<=*a && *b<=*c){
     if(*a<=*c){
-      min = *b;
-      med = *a;
-      max = *c;
-      *a = min;
-      *b = med;
-      *c = max;
+      aux = *a;
+      *a = *b;
+      *b = aux;
     }else{
-      min = *b;
-      med = *c;
-      max = *a;
-      *a = min;
-      *b = med;
-      *c = max;
+      aux = *a;
+      *a = *b;
+      *b = aux;
+      aux = *c;
+      *c = *b;
+      *b = aux;
     }  
   }
   if(*c<=*a && *c<=*b){
     if(*a<=*b){
-      min = *c;
-      med = *a;
-      max = *b;
-      *a = min;
-      *b = med;
-      *c = max;
+      aux = *a;
+      *a = *c;
+      *c = aux;
+      aux = *b;
+      *b = *c;
+      *c = aux;
     }else{
-      min = *c;
-      med = *b;
-      max = *a;
-      *a = min;
-      *b = med;
-      *c = max;      
+      aux = *c;
+      *c = *a;
+      *a = aux;
     }  
   }
 }
