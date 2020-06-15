@@ -26,15 +26,15 @@
 int greatest (int a, int b, int c)
 {
   int maior;
-  if (a>b && a>c){
+  if (a>=b && a>=c){
     maior=a;
     return maior;
   }
-  if (b>a && b>c){
+  if (b>=a && b>=c){
     maior=b;
     return maior;
   }
-  if (c>b && c>a){
+  if (c>=b && c>=a){
     maior=c;
     return maior;
   }
