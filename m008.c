@@ -37,12 +37,12 @@ int pe(char c, int k ){
    form into LAST-first-middle form. */
 
 void lastname (char *s){
+  int i =0;
+  int pde =comprimento;
   int comprimento = strlen(s);
+  const char *ult_nome;
   char nome
   char name[comprimento];
-  int i =0;
-  char ult_nome;
-  int pde =comprimento;
   while(i!= 0){
     pde = pe(s[i], i);
     i++;
