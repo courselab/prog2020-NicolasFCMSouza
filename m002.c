@@ -27,7 +27,7 @@
 
 void sort (int *a, int *b, int *c){
   int aux;
-  if(*a<=*b && *a<=*c){
+  if((*a<=*b) && (*a<=*c)){
     if(*b<=*c){
     }else{
       aux = *b;
@@ -35,7 +35,7 @@ void sort (int *a, int *b, int *c){
       *c = aux;
     }  
   }
-  if(*b<=*a && *b<=*c){
+  if((*b<=*a) && (*b<=*c)){
     if(*a<=*c){
       aux = *a;
       *a = *b;
@@ -49,7 +49,7 @@ void sort (int *a, int *b, int *c){
       *b = aux;
     }  
   }
-  if(*c<=*a && *c<=*b){
+  if((*c<=*a) && (*c<=*b)){
     if(*a<=*b){
       aux = *a;
       *a = *c;
