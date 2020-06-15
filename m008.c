@@ -19,17 +19,34 @@
       do no not change function main().
 
 */
-
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 #define MAX 256
 
+int pe(char c, int k ){
+  int n = 0;
+  if (c== ' '){
+    n = k;
+  } 
+  return n ;
+}
+
 /* Converts the string 's' from first-middle-last name 
    form into LAST-first-middle form. */
 
-void lastname (char *s)
-{
+void lastname (char *s){
+  int comprimento = strlen(s);
+  char name;
+  int i = 0;
+  int pde = 0;
+  while(s[i] != 0){
+    pde = pe(s[i], i);
+  }
+  for (i=pde;i=comprimento; i++){
+
+  }
 }
 
 

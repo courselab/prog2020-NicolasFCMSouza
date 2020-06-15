@@ -23,12 +23,25 @@
 #include <stdlib.h>
 
 #define MAX 256
-
+int nl (char c){
+  int n = 0;
+  if (c>='a' && c<='z'){
+    n+=1;
+  }
+  if (c>='A' && c<='Z'){
+    n+=1;
+  } 
+  return n ;
+}
 /* Count the number of letters in string s.*/
 
-int lettercount (char *s)
-{
-  return 0;
+int lettercount (char *s){
+  int contagem =0, i = 0;
+  while(s[i] != 0){
+    contagem +=nl(s[i]);
+    i++;
+  }
+  return contagem ;
 }
 
 

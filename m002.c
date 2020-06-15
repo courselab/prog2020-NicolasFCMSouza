@@ -25,8 +25,59 @@
 
 /* Sort three integers x, y, z in ascending order.*/
 
-void sort (int *a, int *b, int *c)
-{
+void sort (int *a, int *b, int *c){
+  int min, med, max;
+  if(*a<=*b && *a<=*c){
+    if(*b<=*c){
+      printf("%ls %ls %ls", a, b, c);
+    }else{
+      min = *a;
+      med = *c;
+      max = *b;
+      *a = min;
+      *b = med;
+      *c = max;
+      printf("%ls %ls %ls", a, b, c);
+    }  
+  }
+  if(*b<=*a && *b<=*c){
+    if(*a<=*c){
+      min = *b;
+      med = *a;
+      max = *c;
+      *a = min;
+      *b = med;
+      *c = max;
+      printf("%ls %ls %ls", a, b, c);
+    }else{
+      min = *b;
+      med = *c;
+      max = *a;
+      *a = min;
+      *b = med;
+      *c = max;
+      printf("%ls %ls %ls", a, b, c);
+    }  
+  }
+  if(*c<=*a && *c<=*b){
+    if(*a<=*b){
+      min = *c;
+      med = *a;
+      max = *b;
+      *a = min;
+      *b = med;
+      *c = max;
+      printf("%ls %ls %ls", a, b, c);
+    }else{
+      min = *c;
+      med = *b;
+      max = *a;
+      *a = min;
+      *b = med;
+      *c = max;
+      printf("%ls %ls %ls", a, b, c);
+    }  
+  }
 }
 
 /* Do not edit this function. */

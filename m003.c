@@ -21,9 +21,17 @@
 
 /* Verify if the positive integer 'a' is prime. */
 
-int is_prime (int a)
-{
-  return 0;
+int is_prime (int a){
+  int i, marcador =0;
+ for (i = 2; i <= a / 2; i++) {
+    if (a % i == 0) {
+       marcador++;
+    }
+ }
+ if (marcador == 0)
+    return 1;
+ else
+    return 0;
 }
 
 #define USAGE "m003 <num>\n"
