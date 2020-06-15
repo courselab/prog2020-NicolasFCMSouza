@@ -29,15 +29,13 @@ void sort (int *a, int *b, int *c){
   int min, med, max;
   if(*a<=*b && *a<=*c){
     if(*b<=*c){
-      printf("%ls %ls %ls", a, b, c);
     }else{
       min = *a;
       med = *c;
       max = *b;
       *a = min;
       *b = med;
-      *c = max;
-      printf("%ls %ls %ls", a, b, c);
+      *c = max;;
     }  
   }
   if(*b<=*a && *b<=*c){
@@ -48,7 +46,6 @@ void sort (int *a, int *b, int *c){
       *a = min;
       *b = med;
       *c = max;
-      printf("%ls %ls %ls", a, b, c);
     }else{
       min = *b;
       med = *c;
@@ -56,7 +53,6 @@ void sort (int *a, int *b, int *c){
       *a = min;
       *b = med;
       *c = max;
-      printf("%ls %ls %ls", a, b, c);
     }  
   }
   if(*c<=*a && *c<=*b){
@@ -67,15 +63,13 @@ void sort (int *a, int *b, int *c){
       *a = min;
       *b = med;
       *c = max;
-      printf("%ls %ls %ls", a, b, c);
     }else{
       min = *c;
       med = *b;
       max = *a;
       *a = min;
       *b = med;
-      *c = max;
-      printf("%ls %ls %ls", a, b, c);
+      *c = max;      
     }  
   }
 }
