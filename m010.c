@@ -73,7 +73,10 @@ int day_of_week (int day, int month)
       break;
     case 0:
       return tue;
-      break;   
+      break; 
+    default:
+    return 0;
+      break;  
   }
 }
 
