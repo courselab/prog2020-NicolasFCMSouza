@@ -51,7 +51,6 @@ int day_of_week (int day, int month)
     i++;
   }
   soma += day;
-  printf("%d", soma);
   switch(soma%7){
     case 6:
       return mon;
