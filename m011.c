@@ -28,24 +28,24 @@
 
 int wordcount (char *filename)
 {
-  FILE *fp;
-  int n;
-  int num =0;
+  FILE *fn;
+  int q;
+  int quant =0;
   int status=0;
 
-  fp=fopen(filename,"r");
+  fn=fopen(filename,"r");
 
-  while((n=fgetc(fp))!=EOF){
-    if((status==0 && n!=32)||(status==0 && n=='\n')){
+  while((q=fgetc(fn))!=EOF){
+    if((status==0 && q==32)||(status==0 && q=='\n')){
       status=1;
-      num ++;
+      quant ++;
     }else{
-      if(status==1 && n==32){
+      if(status==1 && q!=32){
         status=0;
       }
     } 
   } 
-  return num;
+  return quant;
 }
 
 /* Do not edit function main. */
