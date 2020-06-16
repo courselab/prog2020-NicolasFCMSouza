@@ -28,52 +28,51 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 /* Return the day of the week in the numeric form:
    Sunday=0, Monday=1... Saturday=6.*/
 
-int day_of_week (int day, int month){
+int day_of_week (int day, int month)
+{
   int i = 0;
   int ddm[12];
   int soma = 0;
+  ddm[0]=31;
+  ddm[1]=29;
+  ddm[2]=31;
+  ddm[3]=30;
+  ddm[4]=31;
+  ddm[5]=30;
+  ddm[6]=31;
+  ddm[7]=31;
+  ddm[8]=30;
+  ddm[9]=31;
+  ddm[10]=30;
+  ddm[11]=31;
 
-  for(i=0; i>=6;i++){
-    if((i+1)%2 != 0){
-      ddm[i]=31;
-    }else if((i+1)%2 == 0 && i != 2){
-      ddm[i]=30;
-    }else{
-      ddm[i]=29;
-    }
-  }
-  for (i=7; i>=11; i++){
-    if((i+1)%2 == 0){
-      ddm[i]=31;
-    }else if((i+1)%2 != 0 && i != 2){
-      ddm[i]=30;
-    }
-  }
-  for (i=0; i>month-1; i++){
+  while(i<month-1){
     soma += ddm[i];
+    i++;
   }
-  soma += day+10;
+  soma += day;
+  printf("%d", soma);
   switch(soma%7){
     case 6:
-      return wed;
-      break;
-    case 5:
-      return tue;
-      break;
-    case 4:
       return mon;
       break;
-    case 3:
-      return sat;
-      break;
-    case 2:
+    case 5:
       return sun;
       break;
-    case 1:
+    case 4:
+      return sat;
+      break;
+    case 3:
       return fri;
       break;
-    case 0:
+    case 2:
       return thu;
+      break;
+    case 1:
+      return wed;
+      break;
+    case 0:
+      return tue;
       break;   
   }
 }
