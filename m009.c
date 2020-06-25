@@ -50,7 +50,7 @@ void sort (int* vector, int n)
       }
     }
     //for 2- percorrer todo vetor a procura do valor que foi pego no for 1 e atribuir um valor maior que 100 para que essa posição do vetor n seja usada de novo
-    for(ii=0; ii<=tam; ii++){
+    for(ii=0; ii<tam; ii++){
       //if que checa a condição do valor que foi pego no for 1 ser igual a ao valor da posição. caso for contador recebe 1 e a condição do if deixa de ser atendida
       if(valor ==vector[ii] && contador !=1){
         vector[ii]=101; //atribuição de 101 na posição do vetor que continha o menor valor 
