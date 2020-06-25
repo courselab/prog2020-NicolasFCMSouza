@@ -15,6 +15,7 @@
       do no not edit function main().
 
 */
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -37,12 +38,12 @@ void sort (int* vector, int n)
   int tam = vec_len(vector); // contagem do tamanho do vector usando a função vec_len
   int newvec[tam];//criando novo vetor para armazenar a ordem crescente dos valores de vector
 
-  while(i != tam){
+  while(i != tam-1){
     if (valor != MAX){
       valor=MAX;
     }
     // for 1- percorre todo o vetor atrás do menor valor 
-    for(ii=0; ii<=tam; ii++){
+    for(ii=0; ii<tam; ii++){
       //condição que tem que ser atendida para ser o menor valor 
       if(valor >=vector[ii]){
         valor = vector[ii]; // armazena em valor o menor valor do vetor
@@ -65,6 +66,7 @@ void sort (int* vector, int n)
     newvec[i]=valor; 
     i++;
   }
+
   //for3- para passar os valores do newvector que estao em ordem crescentes dentro do vector
   for(i=0; i<=tam; i++){
     vector [i] = newvec[i];
