@@ -70,6 +70,7 @@ void sort (int* vector, int n)
   //for3- para passar os valores do newvector que estao em ordem crescentes dentro do vector
   for(i=0; i<tam; i++){
     vector [i] = newvec[i];
+    
   }
 }
 
