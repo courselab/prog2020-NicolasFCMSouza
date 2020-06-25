@@ -20,57 +20,59 @@
 #include <stdlib.h>
 
 #define MAX 100
-// sinceramente n sei direito como funciona mas peguei de um site que dizia contar o tamanho do vetor, testei e deu certo
-int vec_len(int *vec){
-    int c = -1;
-    while(*(vec++))
-        c++;
-    return c;
+
+int vec_len(int *vec)
+{
+  int c = -1;
+  while(*(vec++))
+    c++;
+  return c;
 }
 /* Sort the first 'n' integers values in 'vector'. */
 
 void sort (int* vector, int n)
 {
-  int contador = 0;// variavel para checar condição no for2
-  int i=0; //controlador do while e do for 3(for fora do while)
-  int ii = 0;// controlador do for 1 e for 3 (ambos os fors dentro do while)
-  int valor = MAX;//variavel usada para receber o menor valor do vector
-  int tam = vec_len(vector); // contagem do tamanho do vector usando a função vec_len
-  int newvec[tam];//criando novo vetor para armazenar a ordem crescente dos valores de vector
+  int contador = 0;
+  int i=0; 
+  int ii = 0;
+  int valor = MAX;
+  int tam = vec_len(vector); 
+  int newvec[tam];
 
-  while(i != tam-1){
-    if (valor != MAX){
+  while(i != tam-1)
+  {
+    if (valor != MAX)
+    {
       valor=MAX;
     }
-    // for 1- percorre todo o vetor atrás do menor valor 
-    for(ii=0; ii<tam; ii++){
-      //condição que tem que ser atendida para ser o menor valor 
-      if(valor >=vector[ii]){
-        valor = vector[ii]; // armazena em valor o menor valor do vetor
+   
+    for(ii=0; ii<tam; ii++)
+    {
+      
+      if(valor >=vector[ii])
+      {
+        valor = vector[ii]; 
       }
     }
-    //for 2- percorrer todo vetor a procura do valor que foi pego no for 1 e atribuir um valor maior que 100 para que essa posição do vetor n seja usada de novo
-    for(ii=0; ii<tam; ii++){
-      //if que checa a condição do valor que foi pego no for 1 ser igual a ao valor da posição. caso for contador recebe 1 e a condição do if deixa de ser atendida
-      if(valor ==vector[ii] && contador !=1){
-        vector[ii]=101; //atribuição de 101 na posição do vetor que continha o menor valor 
-      contador=1;//atribuição de 1 apra fazer a condição do if nao ser mais valida.
+    
+    for(ii=0; ii<tam; ii++)
+    {
+      
+      if(valor ==vector[ii] && contador !=1)
+      {
+        vector[ii]=101;
+        contador=1;
       }
 
-    /* esse for foi criado para:
-          1. para impedir que os valores exceto o menor recebam 101.
-          2. para impedir que valore siguais os menores recebam 101, antes da vez dele chegar */
-
     } 
-    contador = 0; // reiniciando o contador para ser reutilizado na estrutura a cima 
+    contador = 0; 
     newvec[i]=valor; 
     i++;
   }
-
-  //for3- para passar os valores do newvector que estao em ordem crescentes dentro do vector
-  for(i=0; i<tam; i++){
+  for(i=0; i<tam; i++)
+  {
     vector [i] = newvec[i];
-    
+
   }
 }
 
