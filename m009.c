@@ -28,51 +28,53 @@ int vec_len(int *vec)
     c++;
   return c;
 }
+
 /* Sort the first 'n' integers values in 'vector'. */
 
 void sort (int* vector, int n)
 {
+  if (n < 1){
+    return;
+  }
   int contador = 0;
   int i=0; 
   int ii = 0;
   int valor = MAX;
   int tam = vec_len(vector); 
-  int newvec[tam];
+  int newvec[tam+1];
 
-  while(i != tam-1)
+  if (tam != 1)
   {
-    if (valor != MAX)
+    while(i != tam-2)
     {
-      valor=MAX;
-    }
-   
-    for(ii=0; ii<tam; ii++)
-    {
-      
-      if(valor >=vector[ii])
+      if (valor != MAX)
       {
-        valor = vector[ii]; 
+        valor=MAX;
       }
-    }
-    
-    for(ii=0; ii<tam; ii++)
-    {
-      
-      if(valor ==vector[ii] && contador !=1)
+      for(ii=0; ii<tam-1; ii++)
       {
-        vector[ii]=101;
-        contador=1;
+        if(valor >=vector[ii] )
+        {
+          valor = vector[ii]; 
+        }
       }
-
-    } 
-    contador = 0; 
-    newvec[i]=valor; 
-    i++;
-  }
-  for(i=0; i<tam; i++)
-  {
-    vector [i] = newvec[i];
-
+      for(ii=0; ii<tam-1; ii++)
+      { 
+        if(valor ==vector[ii] && contador !=1)
+        {
+          vector[ii]=101;
+          contador=1;
+        }
+      } 
+      contador = 0; 
+      newvec[i]=valor; 
+      i++;
+    }
+    for(i=0; i<tam-1; i++)
+    {
+      vector [i]=0;
+      vector [i] = newvec[i];
+    }
   }
 }
 

@@ -40,7 +40,7 @@ int decimal (char *b)
     }
     pot_base_dois *= 2;
   }
- return contador;
+  return contador;
 }
 
 #define USAGE "m004 <string>\n"
