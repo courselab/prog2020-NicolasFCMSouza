@@ -29,19 +29,15 @@
 /* Converts the string 's' from first-middle-last name 
    form into LAST-first-middle form. */
 
-void lastname (char *s){
-int i,pos_ult_esp, tam_vec,aux1,aux2;
-  aux1=0;
-  aux2=0;
-  int status=0;
-  int pause=0;
+void lastname (char *s)
+{
+  int i,pos_ult_esp, tam_vec, aux1=0, aux2=0;
   char vec_aux[256];
   strcpy(vec_aux,s);
   tam_vec=strlen(vec_aux)-1;
   
   for(i=tam_vec;vec_aux[i]!=32;i--)
   {
-    
   } 
   pos_ult_esp=i+1;
   i=0;
