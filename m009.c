@@ -15,17 +15,69 @@
       do no not edit function main().
 
 */
-
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 #define MAX 100
 
+int vec_len(int *vec)
+{
+  int c = -1;
+  while(*(vec++))
+    c++;
+  return c;
+}
+
 /* Sort the first 'n' integers values in 'vector'. */
 
 void sort (int* vector, int n)
 {
+  if (n < 1){
+    return;
+  }
+  int contador = 0;
+  int i=0; 
+  int ii = 0;
+  int valor = MAX;
+  int tam = vec_len(vector); 
+  int newvec[tam+1];
+
+  if (tam != 1)
+  {
+    while(i != tam-2)
+    {
+      if (valor != MAX)
+      {
+        valor=MAX;
+      }
+      for(ii=0; ii<tam-1; ii++)
+      {
+        if(valor >=vector[ii] )
+        {
+          valor = vector[ii]; 
+        }
+      }
+      for(ii=0; ii<tam-1; ii++)
+      { 
+        if(valor ==vector[ii] && contador !=1)
+        {
+          vector[ii]=101;
+          contador=1;
+        }
+      } 
+      contador = 0; 
+      newvec[i]=valor; 
+      i++;
+    }
+    for(i=0; i<tam-1; i++)
+    {
+      vector [i]=0;
+      vector [i] = newvec[i];
+    }
+  }
 }
+
 
 #define USAGE "m009 <num1> <nun2> ... \n"
 

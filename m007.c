@@ -1,4 +1,4 @@
-/* m007.c - Number of letters.
+  /* m007.c - Number of letters.
 
    This program reads the name of a person from the standard input
    and outputs the number of letters contained in the name (excluding
@@ -24,11 +24,27 @@
 
 #define MAX 256
 
+int nl (char c)
+{
+  int n = 0;
+  if (c>='a' && c<='z'){
+    n+=1;
+  }
+  if (c>='A' && c<='Z'){
+    n+=1;
+  } 
+  return n ;
+}
 /* Count the number of letters in string s.*/
 
 int lettercount (char *s)
 {
-  return 0;
+  int contagem =0, i = 0;
+  while(s[i] != 0){
+    contagem +=nl(s[i]);
+    i++;
+  }
+  return contagem ;
 }
 
 

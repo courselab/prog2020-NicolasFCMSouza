@@ -21,11 +21,24 @@
 
 #define MAX 255
 
+int nl (char c){
+  int n;
+  if (s>='a' && s<='z'){
+    n+=1;
+  }
+  if (s>='A' && s<='Z'){
+    n+=1;
+  } 
+  return n ;
+}
 /* Write the number 'n' in Roman numerals.*/
 
-int pitagorean (char *s)
-{
-  return 0;
+int pitagorean (char *s){
+  int contagem;
+  while(){
+    
+  }
+  return contagem ;
 }
 
 /* Do not edit function main. */

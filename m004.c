@@ -16,7 +16,6 @@
       do no not change function main().
 
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -29,8 +28,19 @@
 
 int decimal (char *b)
 {
+  int comprimento, i;
+  int contador = 0;
+  int pot_base_dois =1;
+
+  comprimento=strlen(b);
   
-  return 0;
+  for (i=comprimento-1; i>=0; i--){
+    if(b[i]=='1'){
+     contador += 1*pot_base_dois;
+    }
+    pot_base_dois *= 2;
+  }
+  return contador;
 }
 
 #define USAGE "m004 <string>\n"
